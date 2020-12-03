@@ -1,11 +1,11 @@
 "--utf8--"
 '''
 Header
-
 par Romain GALMIER
 en nov/dec 2020 
-projet :  pendu sans interface grafique
+projet :  pendu avec interface grafique
 '''
+
 from random import randint
 from fonctionpendu import verifLetter , ajoutLettre , concat , choixMot
 

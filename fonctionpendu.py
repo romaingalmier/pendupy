@@ -1,3 +1,5 @@
+"--utf8--"
+
 from random import randint
 def verifLetter (mot,lettre) :
     '''
@@ -38,10 +40,12 @@ def choixMot() :
     sortie  :mot à deviner
     prend un mot dans la liste eproposé 
     '''
-    fichier = open ("motspendu.txt" , 'r')
-    text=fichier.readlines()
-    mot=text[randint(0,len(text))]
-    fichier.close()
-    mot = mot[:-1]
-    return mot
-
+    fichier = open( file= "motspendu.txt", mode="rt" ,encoding="utf-8")
+    while True :
+        text=fichier.readlines()
+        print(len(text))
+        mot=text[randint(0,len(text)-1)]
+        mot = mot.strip()
+        if len(mot) >= 5 :
+            fichier.close()
+            return mot
