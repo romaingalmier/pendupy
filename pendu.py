@@ -1,9 +1,10 @@
 "--utf8--"
 '''
 Header
-par Romain GALMIER
+par Romain GALMIER / Delio COLAS
 en nov/dec 2020 
-projet :  pendu avec interface grafique
+projet :  pendu avec interface graphique
+TODO : reafficher l'image supprimmer (tout marche sauf l'affichage)
 '''
 
 from random import randint
