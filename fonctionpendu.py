@@ -1,6 +1,9 @@
 "--utf8--"
-
 from random import randint
+from tkinter import *
+from tkinter import messagebox
+
+
 def verifLetter (mot,lettre) :
     '''
     entee//sortie : le mot a deviner et la lettre donné // True or False
@@ -19,7 +22,7 @@ def ajoutLettre(mot,lettre,motdev) :
     '''
     c = 0
     for i in mot :
-        if i == lettre and i !=0 : 
+        if i == lettre and i != 0 : 
             lettre = lettre.lower()
             motdev[c] = lettre
         c += 1
@@ -31,7 +34,7 @@ def concat (motdev):
     '''
     x = ""
     for i in range(len(motdev)):
-        x=  x + motdev[i]
+        x =  x + motdev[i]
     return x
 
 def choixMot() :
@@ -40,12 +43,14 @@ def choixMot() :
     sortie  :mot à deviner
     prend un mot dans la liste eproposé 
     '''
-    fichier = open( file= "motspendu.txt", mode="rt" ,encoding="utf-8")
+    fichier = open( file = "motspendu.txt", mode = "rt" ,encoding = "utf-8")
     while True :
-        text=fichier.readlines()
+        text = fichier.readlines()
         print(len(text))
-        mot=text[randint(0,len(text)-1)]
+        mot = text[randint(0,len(text)-1)]
         mot = mot.strip()
         if len(mot) >= 5 :
             fichier.close()
             return mot
+
+
